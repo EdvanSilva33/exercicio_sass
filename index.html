@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./build/styles/main.css" />
+    <title>compilando sass via gulp</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="./build/images/logotipo.png" alt="logo" />
+        </div>
+        <nav class="menu">
+          <a href="#">Home</a>
+          <a href="#">Conteudo</a>
+          <a href="#">Fotos</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <figure class="galeria">
+          <div class="img">
+            <div class="planta" id="imagenJaro"></div>
+
+            <button onclick="imagenJaro()">Veja mais..</button>
+          </div>
+
+          <div class="img">
+            <div class="torre" id="imagenTorre"></div>
+
+            <button onclick="torrer()">Veja mais..</button>
+          </div>
+
+          <div class="img">
+            <div class="biblioteca" id="biblioteca"></div>
+            <button type="button" onclick="Lib()">Saiba mais</button>
+          </div>
+
+          <div class="img">
+            <div class="ponte" id="ponte"></div>
+            <button type="button" onclick="Ponte()">Saiba mais</button>
+          </div>
+        </figure>
+      </div>
+    </main>
+    <script src="./build/scripts/styles.js"></script>
+  </body>
+</html>

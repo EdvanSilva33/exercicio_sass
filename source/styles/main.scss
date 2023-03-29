@@ -1,0 +1,102 @@
+@use 'variaveis';
+@use 'reset';
+
+@mixin elemento() {
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 210px;
+   
+
+}
+
+body{
+    background-color: variaveis.$corPrincipal;
+    header{
+        background-color: variaveis.$corSecundaria;
+        padding: 16px;
+        .container{
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            .logo{
+                width: 120px;
+                img{
+                    width: 100%;
+                }
+            }
+            .menu{
+                display: flex;
+                justify-content: space-between;
+                width: 250px;
+                a{text-decoration: none;
+                    font-size: 1.3rem;
+                    color:variaveis.$corTextPrincipal;
+                    border-bottom: 2px solid transparent;
+                    &:hover{
+                        color:variaveis.$corTextSelection;
+                        border-color:variaveis.$corTextSelection;
+                    }
+    
+                }
+            }
+        }
+    }
+    main{
+        .galeria{
+            padding: 100px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .img{
+               margin-bottom: 15px;
+
+                .planta{
+                    @include elemento();
+                    background-image: variaveis.$imagenprimeira; 
+                }
+                .tower{
+                    @include elemento();
+                    background-image: variaveis.$imagenSegunda;
+                    
+            } 
+             .torre{
+                @include elemento();
+                background-image:variaveis.$imagemProxima ;
+             }
+             .torre-segunda{
+                @include elemento();
+                background-image: variaveis.$imagenProximaSe;
+             }
+             .ponte{
+                @include elemento();
+                background-image: variaveis.$imagenbiblioteca;
+             }
+             .imagenNext{
+                background-image: variaveis.$imagenNext;
+                @include elemento();
+             }
+             .biblioteca{
+                @include elemento();
+                background-image: variaveis.$imagenPonte;
+             }
+            .imagenNextTwo{
+                @include elemento();
+                background-image: variaveis.$imagenNextTwo;
+            }
+            button{
+                width: 150px;
+                height:40px;
+                padding: 5px;
+                margin-top: 5px;
+                border-radius: 8px;
+                border: none;
+                background-color: variaveis.$corButao;
+                color:variaveis.$corTextPrincipal;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+}
